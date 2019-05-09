@@ -28,6 +28,9 @@ public class PlayerController : MonoBehaviour {
         {
             projectileToPrefabLookup.Add(mapping.projectileType, mapping.projectilePrefab);
         }
+
+        // TODO: Next line of code belongs in a GameManager instead of in a PlayerController script.
+        AudioManager.instance.EnableBackgroundMusic(false);
     }
 
     public void Shoot(ProjectileType projectileType)
@@ -37,6 +40,7 @@ public class PlayerController : MonoBehaviour {
             GameObject projectToShoot = projectileToPrefabLookup[projectileType];
 
             Instantiate(projectToShoot, projectileSpawnPosition.position, Quaternion.identity);
+            AudioManager.instance.PlayShootSFX();
         }     
     }
 

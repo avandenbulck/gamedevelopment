@@ -7,6 +7,7 @@ public class MainMenuManager : MonoBehaviour
 {
     public void StartGame()
     {
+        AudioManager.instance.EnableBackgroundMusic(false);
         SceneManager.LoadScene("Level");
     }
 
