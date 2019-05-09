@@ -5,11 +5,6 @@ using UnityEngine;
 public class InputManager : MonoBehaviour {
 
     public PlayerController player;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
 	// Update is called once per frame
 	void Update () {

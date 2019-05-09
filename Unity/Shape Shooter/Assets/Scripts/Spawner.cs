@@ -7,6 +7,8 @@ public class Spawner : MonoBehaviour {
     public GameObject[] projectilesPrefabs;
     public Transform positionToSpawn;
     public float timeBetweenProjectiles;
+
+    private bool spawnObjects = true;
     
 	// Use this for initialization
 	void Start () {
@@ -15,7 +17,7 @@ public class Spawner : MonoBehaviour {
 
     private IEnumerator SpawnProjectiles()
     {
-        while (true)
+        while (spawnObjects)
         {
             GameObject projectileToSpawn = projectilesPrefabs[Random.Range(0, projectilesPrefabs.Length)];
 

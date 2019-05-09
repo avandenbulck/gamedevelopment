@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 [RequireComponent(typeof(MovingObject))]
@@ -30,7 +31,7 @@ public class PlayerProjectile : MonoBehaviour {
             Enemy enemy = other.GetComponent<Enemy>();
             if (enemy.projectileType == projectileType)
                 enemy.Die();
-            Die();
+            Die();          
         }
     }
 
