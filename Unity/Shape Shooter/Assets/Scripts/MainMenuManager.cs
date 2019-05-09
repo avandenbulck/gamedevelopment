@@ -5,9 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
+    void Start()
+    {
+        AudioManager.instance.EnableBackgroundMusic(true);
+    }
+
     public void StartGame()
     {
-        AudioManager.instance.EnableBackgroundMusic(false);
         SceneManager.LoadScene("Level");
     }
 
